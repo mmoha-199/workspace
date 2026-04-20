@@ -1,7 +1,7 @@
-/// @file MainViewModel.cs
-/// @brief Main dashboard view model for authenticated users
-/// @author StarterApp Development Team
-/// @date 2025
+// @file MainViewModel.cs
+// @brief Main dashboard view model for authenticated users
+// @author StarterApp Development Team
+// @date 2025
 
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;

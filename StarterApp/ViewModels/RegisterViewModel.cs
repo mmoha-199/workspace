@@ -1,7 +1,7 @@
-/// @file RegisterViewModel.cs
-/// @brief User registration view model
-/// @author StarterApp Development Team
-/// @date 2025
+// @file RegisterViewModel.cs
+// @brief User registration view model
+// @author StarterApp Development Team
+// @date 2025
 
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;

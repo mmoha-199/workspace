@@ -1,7 +1,7 @@
-/// @file ProfileViewModel.cs
-/// @brief User profile management view model
-/// @author StarterApp Development Team
-/// @date 2025
+// @file ProfileViewModel.cs
+// @brief User profile management view model
+// @author StarterApp Development Team
+// @date 2025
 
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;

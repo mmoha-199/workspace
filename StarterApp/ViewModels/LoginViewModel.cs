@@ -1,7 +1,7 @@
-/// @file LoginViewModel.cs
-/// @brief Login page view model for user authentication
-/// @author StarterApp Development Team
-/// @date 2025
+// @file LoginViewModel.cs
+// @brief Login page view model for user authentication
+// @author StarterApp Development Team
+// @date 2025
 
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;

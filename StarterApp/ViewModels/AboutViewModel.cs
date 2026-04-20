@@ -1,7 +1,7 @@
-﻿/// @file AboutViewModel.cs
-/// @brief About page view model for displaying application information
-/// @author StarterApp Development Team
-/// @date 2025
+﻿// @file AboutViewModel.cs
+// @brief About page view model for displaying application information
+// @author StarterApp Development Team
+// @date 2025
 
 using CommunityToolkit.Mvvm.Input;
 using System.Windows.Input;

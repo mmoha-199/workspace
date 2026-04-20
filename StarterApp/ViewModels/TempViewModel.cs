@@ -1,7 +1,7 @@
-/// @file TempViewModel.cs
-/// @brief Temporary placeholder view model
-/// @author StarterApp Development Team
-/// @date 2025
+// @file TempViewModel.cs
+// @brief Temporary placeholder view model
+// @author StarterApp Development Team
+// @date 2025
 
 using CommunityToolkit.Mvvm.Input;
 using System.Windows.Input;
