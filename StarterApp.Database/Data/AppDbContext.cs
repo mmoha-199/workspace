@@ -37,10 +37,26 @@ public class AppDbContext : DbContext
     public DbSet<Role> Roles { get; set; }
     public DbSet<User> Users { get; set; }
     public DbSet<UserRole> UserRoles { get; set; }
+    public DbSet<Item> Items { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
+
+        // Configure Item entity
+        modelBuilder.Entity<Item>(entity =>
+        {
+            entity.HasIndex(e => e.Id).IsUnique();
+            entity.Property(e => e.Name).HasMaxLength(100);
+            entity.Property(e => e.Description).HasMaxLength(255);
+            entity.Property(e => e.PricePerDay).HasPrecision(10, 2);
+            entity.Property(e => e.CategoryId).HasMaxLength(255);
+            //entity.Property(e => e.OwnerId).HasMaxLength(255);
+            //entity.Property(e => e.Location).HasMaxLength(255);
+            entity.Property(e => e.AvailableFrom).HasMaxLength(255);
+            entity.Property(e => e.AvailableTo).HasMaxLength(255);
+            entity.Property(e => e.IsAvailable).HasDefaultValue(true);
+        });
 
         // Configure User entity
         modelBuilder.Entity<User>(entity =>

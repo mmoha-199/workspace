@@ -13,6 +13,25 @@ namespace StarterApp.Database.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "items",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Name = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    Description = table.Column<string>(type: "character varying(255)", maxLength: 255, nullable: false),
+                    PricePerDay = table.Column<decimal>(type: "numeric(10,2)", precision: 10, scale: 2, nullable: false),
+                    CategoryId = table.Column<string>(type: "text", nullable: false),
+                    AvailableFrom = table.Column<DateTime>(type: "timestamp with time zone", maxLength: 255, nullable: false),
+                    AvailableTo = table.Column<DateTime>(type: "timestamp with time zone", maxLength: 255, nullable: false),
+                    IsAvailable = table.Column<bool>(type: "boolean", nullable: false, defaultValue: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_items", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "role",
                 columns: table => new
                 {
@@ -79,6 +98,12 @@ namespace StarterApp.Database.Migrations
                 });
 
             migrationBuilder.CreateIndex(
+                name: "IX_items_Id",
+                table: "items",
+                column: "Id",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
                 name: "IX_role_Name",
                 table: "role",
                 column: "Name",
@@ -105,6 +130,9 @@ namespace StarterApp.Database.Migrations
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "items");
+
             migrationBuilder.DropTable(
                 name: "user_role");
 
